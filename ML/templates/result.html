@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Issue Prediction Result</title>
+    <style>
+        img {
+            width: 400px; /* Set a fixed width for the images */
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body align="center" >
+    <p><h1>Character: {{ character }}</h1></p>
+    {% if  predicted_health_issue == "Obesity"%}
+        <h2>You may have Obesity</h2>
+        <img src="https://media.tenor.com/pSQzGHqX6YAAAAAM/stomach-pinch.gif">
+    {% elif predicted_health_issue == "Diabetes" %}
+        <h2>You may have Diabetes</h2>
+        <img src="https://media.tenor.com/_c_HqXqSvysAAAAC/act4yourheart-diabetes.gif">
+    {% elif predicted_health_issue == "Healthy" %}
+        <h2>You are Healthy .Keep going</h2>
+        <img src="https://media1.giphy.com/media/3ornk8qaF9ytl9zmY8/giphy.gif">
+    {% elif predicted_health_issue == "Curse" %}
+        <h2>You may cursed</h2>
+        <img src="https://media4.giphy.com/media/CCiCwrKIvodowJBbtf/200w.webp?cid=ecf05e4702xnvz0479ap4yv31joukakz563i9ssangh6czkv&ep=v1_gifs_search&rid=200w.webp&ct=g">
+    {% elif predicted_health_issue == "Heart Disease" %}
+        <h2>You may got Heart Disease</h2>
+        <img src="/static/heart disesase.jpg">
+    {% elif predicted_health_issue == "Heart-related issues" %}
+        <h2>You may got Heart-realted Diseases</h2>
+        <img src="https://media.tenor.com/zYe7DHrmxh8AAAAC/sick-heart-pain.gif">
+    {% elif predicted_health_issue == "Anxiety disorders" %}
+        <h2>You may got Anxiety disorders</h2>
+        <img src="https://media.tenor.com/AdNT3SjCMa4AAAAj/brain-fog-narcolepsy.gif">
+    {% elif predicted_health_issue == "Cognitive lapses" %}
+        <h2>You may got Cognitive lapses</h2>
+        <img src="https://i.pinimg.com/originals/b4/10/63/b410633e8c9fed641f1663c674ac9fd1.gif">
+    {% elif predicted_health_issue == "Phenomenal cosmic powers" %}
+        <h2>You may got Phenomenal cosmic powers</h2>
+        <img src="https://media.tenor.com/v3YubPNajWYAAAAM/powers-superpower.gif">
+    {% elif predicted_health_issue == "Wise leadership" %}
+        <h2>You may got Wise leadership</h2>
+        <img src="https://media.tenor.com/BFNhXDPxCVIAAAAM/frog-traveller.gif">
+    {% elif predicted_health_issue == "Villainy" %}
+        <h2>You may be a villain</h2>
+        <img src="https://media.tenor.com/mAPHt_1o6eQAAAAC/giggly-villain.gif">
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <title>Health Issue Predictor</title>
+</head>
+<body>
+    <!-- Sliding Image Container -->
+    <div class="slider-frame">
+        <div class="slide-images-up">
+            <!-- Add your sliding images here -->
+            <img class="image-width-height" src="static\JunkFood.jpeg" alt="Image 1">
+            <img class="image-width-height" src="static\Napping.jpeg" alt="Image 2">
+            <img class="image-width-height" src="static\Fruits.jpeg" alt="Image 3">
+            <img class="image-width-height" src="static\Exercise.jpg" alt="Image 4">
+            <img class="image-width-height" src="static\Weights.jpg" alt="Image 5">
+            <img class="image-width-height" src="/static/swimming.webp" alt="Image 6">
+            <img class="image-width-height" src="/static/reading.avif" alt="Image 7">
+            <img class="image-width-height" src="/static/plan.jpg" alt="Image 8">
+            <img class="image-width-height" src="/static/walking.jpg" alt="Image 9">
+            
+            <!-- Add more images as needed -->
+        </div>
+        
+    </div>
+    
+
+    <!-- Health Issue Predictor Form -->
+    <h1>Health Issue Predictor</h1>
+    <form action="/predict" method="post">
+        <label for="character">Character:</label>
+        <input type="text" name="character" id="character" placeholder="Enter character"><br><br>
+        
+        <label for="diet">Diet:</label>
+        <select name="diet" required>
+            <option value="" disabled selected>Select Diet</option>
+            <option value="Balanced">Balanced</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="High Protein">High Protein</option>
+            <option value="High Carb">High Carbohydrates</option>
+            <option value="Low Carb">Low Carbohydrates</option>
+            <option value="Low Fat">Low Fat</option>
+            <option value="Junk Food">Junk Food</option>
+            <option value="Carnivore">Carnivore</option>
+        </select><br><br>
+        
+        <label for="exercise">Exercise Routine:</label>
+        <select name="exercise" required>
+            <option value="" disabled selected>Select Exercise</option>
+							<option value="Daily jogging">Daily Jogging</option>
+						    <option value="Yoga">Yoga</option>
+							<option value="Weightlifting">Weightlifting</option>
+							<option value="Napping">Napping</option>
+							<option value="Limited activity">Limited activity</option>
+							<option value="Aerobics">Aerobics</option>
+							<option value="Swimming">Swimming</option>
+							<option value="Martial Arts">Martial Arts</option>
+							<option value="Chasing">Chasing</option>
+							<option value="Underwater karate">Underwater Karate</option>
+							<option value="Sitting on a rock">Sitting on a rock</option>
+							<option value="Skateboarding">Skateboarding</option>
+							<option value="Couch potato">Couch potato</option>
+							<option value="Daily walks">Daily walks</option>
+							<option value="Reading">Reading</option>
+							<option value="Crawling">Crawling</option>
+							<option value="Stone lifting">Stone lifting</option>
+							<option value="Cave cleaning">Cave cleaning</option>
+							<option value="Digging">Digging</option>
+							<option value="Gardening">Gardening</option>
+							<option value="Space treadmill">Space treadmill</option>
+							<option value="Space yoga">Space yoga</option>
+							<option value="Space school">Space school</option>
+							<option value="Space dancing">Space dancing</option>
+							<option value="Space fetch">Space fetch</option>
+							<option value="Pinic stealing">Pinic stealing</option>
+							<option value="Nature walks">Nature Walks</option>
+							<option value="Street hustling">Street Hustling</option>
+							<option value="Dumpster diving">Dumpster diving</option>
+							<option value="Chasing Tweety">Chasing Tweety</option>
+							<option value="Flying around">Flying around</option>
+							<option value="Sprinting">Sprinting</option>
+							<option value="Acme contraptions">Acme contraptions</option>
+							<option value="Stuttering">Stuttering</option>
+							<option value="Ballet dancing">Ballet dancing</option>
+							<option value="Swimming in money">Swimming in money</option>
+							<option value="Junior woodchucks">Junior woodchucks</option>
+							<option value="Flying planes">Flying planes</option>
+							<option value="Inventing gadgets">Inventing gadgets"</option>
+							<option value="Crime-fighting">Crime-fighting</option>
+							<option value="Nuts">Nuts</option>
+							<option value="Acorn collecting">Acorn collecting</option>
+							<option value="Cheese tasting">Cheese tasting</option>
+							<option value="Goofing">Goofing</option>
+							<option value="Chasing his tail">Chasing his tail</option>
+							<option value="Milking cows">Milking cows</option>
+							<option value="Horseback riding">Horseback riding</option>
+							<option value="Jumping rope">Jumping rope</option>
+							<option value="Roller skating">Roller skating</option>
+							<option value="Playing trumpet">Playing trumpet</option>
+							<option value="Playing basketball">Playing basketball</option>
+							<option value="Dancing at the ball">Dancing at the ball</option>
+							<option value="Singing with animals">Singing with animals</option>
+							<option value="Pricking her finger">Pricking her finger</option>
+							<option value="Reading books">Reading books</option>
+							<option value="Roaring in the castle">Roaring in the castle</option>
+							<option value="Magic carpet riding">Magic carpet riding</option>
+							<option value="Exploring the palace">Exploring the palace</option>
+							<option value="Granting wishes">Granting wishes</option>
+							<option value="Plotting evil schemes">Plotting evil schemes</option>
+							<option value="Running in the savannah">Running in the savannah</option>
+							<option value="Hunting with Simba">Hunting with Simba</option>
+							<option value="Planning a coup">Planning a coup</option>
+							<option value="Eating Bugs">Eating Bugs</option>
+							<option value="Grub eating">Grub eating</option>
+							<option value="Ruling the Pride Lands">Ruling the Pride Lands</option>
+							<option value="Singing underwater">Singing underwater</option>
+							<option value="Sailing on the sea">Sailing on the sea</option>
+							<option value="Stealing voices">Stealing voices</option>
+							<option value="Flexing in the mirror">Flexing in the mirror</option>
+        </select><br><br>
+        
+        <label for="medical_history">Medical History:</label>
+        <select name="medical_history" required>
+            <option value="" disabled selected>Select Medical History</option>
+            <option value="Healthy">Healthy</option>
+            <option value="Allergies,previous broken leg">Allergies,previous broken leg</option>
+            <option value="Heart condition, gout">Heart condition, gout</option>
+            <option value="Overweight, diabetes">Overweight, diabetes</option>
+            <option value="Obesity, hypertension">Obesity, hypertension</option>
+            <option value="Asthma, allergies">Asthma, allergies</option>
+            <option value="High cholesterol">High cholesterol</option>
+            <option value="Anxiety">Anxiety</option>
+            <option value="Laziness">Laziness</option>
+            <option value="ADHD, mischievousness">ADHD, mischievousness</option>
+            <option value="Obesity, high blood pressure">Obesity, high blood pressure"</option>
+            <option value="Allergies, intelligence">Allergies, intelligence</option>
+            <option value="Obesity, high cholesterol">Obesity, high cholesterol</option>
+            <option value="Cunning, mischief">Cunning, mischief</option>
+            <option value="Overweight, asthma">Overweight, asthma</option>
+            <option value="Clumsiness, injuries">Clumsiness, injuries</option>
+            <option value="Greed">Greed</option>
+            <option value="Curiosity">Curiosity</option>
+            <option value="Adventurous">Adventurous</option>
+            <option value="Mischievousness">Mischievousness</option>
+            <option value="Recklessness, crashes">Recklessness, crashes</option>
+            <option value="Absent-mindedness">Absent-mindedness</option>
+            <option value="Inventive, resourcefull">Inventive, resourcefull</option>
+            <option value="Clumsiness">Clumsiness</option>
+            <option value="Muscular pains, joint pains">Muscular pains, joint pains</option>
+            <option value="Curse">Curse</option>
+            <option value="Cursed, later cured">Cursed, later cured</option>
+            <option value="Phenomenal cosmic powers">Phenomenal cosmic powers</option>
+            <option value="Villainy">Villainy</option>
+            <option value="No worries">No worries</option>
+            <option value="Wise leadership">Wise leadership</option>
+        </select><br><br>
+        
+        <input type="submit" value="Predict">
+   
+    </form>
+    <div class="gif" >
+        <img src="https://i.pinimg.com/originals/f0/3a/5e/f03a5e4075a1820316a7b3fab0675a6c.gif">
+        </div>
+</body>
+</html>

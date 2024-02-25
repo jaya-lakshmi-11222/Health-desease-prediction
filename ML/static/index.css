@@ -1,0 +1,183 @@
+/* Reset some default form styles */
+body, h1, form {
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Style the body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    
+}
+/* CSS for the equal width and height of images */
+.image-width-height {
+    width: 400px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    margin: 5px; /* Add margin for spacing between images */
+}
+
+
+.slider-frame {
+    width: 40%; /* Adjust the width as needed */
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    position: absolute;
+    left: 0; /* Position it on the left side */
+    top: 0;
+}
+
+
+@keyframes slide-animation-up{
+	0% {top: 0;}
+	6% {top: -433px;}
+	12% {top: -866px;}
+	18% {top: -1299px;}
+	24% {top: -1732px;}
+	30% {top: -2165px;}
+	36% {top: -2598px;}
+	42% {top: -3031px;}
+	50% {top: -3031px;}
+	56% {top: -3031px;}
+	62% {top: -2598px;}
+	68% {top: -2165px;}
+	74% {top: -1732px;}
+	80% {top: -1299px;}
+	86% {top: -866px;}
+	92% {top: -433px;}
+	100% {top: 0;}
+}
+
+
+.slide-images-up {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation-name: slide-animation-up;
+    animation-duration: 50s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+}
+
+
+/* Form */
+.form-input {
+    background-color: #E9E9E9;
+    width: 370px;
+    height: 30px;
+    border-radius: 3px;
+    border: 0;
+    text-align: center;
+    -webkit-box-shadow: inset 7px 3px 16px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 7px 3px 16px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 7px 3px 16px -10px rgba(0, 0, 0, 0.75);
+    margin-bottom: 15px;
+}
+
+.align-center {
+    padding: 0 30px;
+}
+
+/* Predict Button */
+.myButton {
+    background-color: #0c0c0c;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 7px 30px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: 0.5s ease-out;
+}
+
+.myButton:hover {
+    background-color: #E9E9E9;
+    color: #000000;
+    box-shadow: inset 7px 3px 16px -10px rgba(0, 0, 0, 0.75);
+}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
+/* Style the h1 header */
+h1 {
+    text-align: center;
+    color: #333;
+    padding: 20px 0;
+}
+
+/* Style the form container */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+/* Style form labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style form inputs */
+input[type="text"],
+select {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+/* Style form submit button */
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Style form submit button on hover */
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+/* CSS to place the GIF at the right side */
+/* CSS to move the image to the top and maintain its reduced size */
+.gif {
+    display: flex;
+    align-items: center; /* Align content vertically in the center */
+    justify-content: flex-end; /* Align content to the right */
+    height: 100%; /* Ensure the container takes up full height */
+
+}
+
+.gif img {
+    max-width: 50%; /* Ensure the image resizes to fit the container width */
+    max-height: 50%; /* Ensure the image resizes to fit the container height */
+    margin-right: 10px; /* Add a margin to create space between the image and the form */
+    position: absolute; /* Position it absolutely within the container */
+    top: 100px; /* Position it at the top */
+    right: 0; /* Position it at the right */
+}
+
+
